@@ -10,7 +10,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            MapView().frame(height: 300)
+            CircleImage().offset(y: -150).padding(.bottom, -130)
+
+            VStack(alignment: .leading) {
+                Text("Hello, SwiftUI!").font(.title).foregroundColor(.green)
+                HStack {
+                    Text("Hello, SwiftUI!").font(.subheadline)
+                    Text("Hello").font(.subheadline)
+                }
+            }
+            .padding()
+
+            Spacer()
+        }
     }
 }
 
